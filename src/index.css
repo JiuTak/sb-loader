@@ -241,7 +241,7 @@
    font-style: 400;
    color: #333;
    font-size: 16px;
-   background-color: #26c6da;
+   /* background-color: #26c6da; */
  }
  h1,
  h2,
@@ -1012,3 +1012,43 @@
    vertical-align: top;
    max-width: 100%;
  }
+
+ /* This is the spinner area */
+
+ * {
+  box-sizing: border-box;
+}
+
+.spinner-container {
+  height: 100vh;
+  display: grid;
+  place-content: center;
+}
+.spinner{
+  width: 35px;
+  height: 35px;
+  background-color: transparent !important;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  -ms-border-radius: 50%;
+  -o-border-radius: 50%;
+  /* border: 2px solid lightgray; */
+  border-width: 2px;
+  border-style: solid;
+  border-color: lightgray;
+  border-bottom-color: transparent;
+  position: relative;
+  animation: spinner 1s linear infinite paused;
+  -webkit-animation: spinner 1s linear infinite;
+}
+
+@keyframes spinner {
+  to {
+    transform: rotate(1turn);
+    -webkit-transform: rotate(1turn);
+    -moz-transform: rotate(1turn);
+    -ms-transform: rotate(1turn);
+    -o-transform: rotate(1turn);
+  }
+}
